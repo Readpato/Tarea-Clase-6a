@@ -6,3 +6,19 @@ h1 {
     text-align: center;
 }
 
+#edadMayorIntegrantes {
+    width: 17%;
+}
+
+#edadMenorIntegrantes {
+    width: 17%;
+}
+
+#promedioEdadIntegrantes {
+    width: 20%;
+}
+
+div {
+    margin-top: 10px;
+    margin-left: 10px;
+}
