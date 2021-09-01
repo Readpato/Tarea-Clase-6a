@@ -8,19 +8,35 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='CSS Tarea 6a.css'>
 </head>
+
 <body>
     <h1>Edades del grupo familiar!</h1>
+
     <div class="preguntaCantidadIntegrantes"></div>
-         <form>
-        <label>Cuantas personas hay en tu grupo familiar?</label>
-        <input id="cantidadIntegrantesFamiliares" type="text" placeholder="Ingresa un numero!">
-        <button id="botonCalculoIntegrantes" type="button">Calcular!</button>
+        <form>
+            <label>Cuantas personas hay en tu grupo familiar?</label>
+            <input id="cantidadIntegrantesFamiliares" type="text" placeholder="Ingresa un numero!">
+            <button id="botonCalculoIntegrantes" type="button">Calcular!</button>
         </form>
     </div>
-    <div id="edadesIntegrantesFamiliares">
+
+    <div>
+        <form id="formularioEdadesIntegrantesFamiliares">
+            
+        </form>
 
     </div>
 
+
+    <div>
+        <form>
+            <input id="edadMayorIntegrantes" type="text" disabled placeholder="La edad mayor de los integrantes">
+            <input id="edadMenorIntegrantes" type="text" disabled placeholder="La menor edad de los integrantes">
+            <input id="promedioEdadIntegrantes" type="text" disabled placeholder="La edad promedio de los integrantes">
+            <button id="botonCalculoEdadesIntegrantes" type="button">Calcula las edades!</button>
+            
+        </form>
+    </div>
 
     <script src='Tarea Clase 6 JS.js'></script>
 </body>
