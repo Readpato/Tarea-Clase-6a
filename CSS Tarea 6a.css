@@ -1,1 +1,34 @@
-aaa
+html {
+    background-color: green;
+}
+
+h1 {
+    text-align: center;
+}
+
+#edadMayorIntegrantes {
+    width: 17%;
+    color: black;
+}
+
+#edadMenorIntegrantes {
+    width: 17%;
+    color: black;
+}
+
+#promedioEdadIntegrantes {
+    width: 20%;
+    color: black;
+}
+
+div {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+#casillerosResultado {
+    color: black;
+}
+
+
