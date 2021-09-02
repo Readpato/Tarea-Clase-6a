@@ -9,6 +9,7 @@ Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuev
 const $botonCalculoIntegrantesFamiliares = document.querySelector('#botonCalculoIntegrantes');
 const $botonCalculoEdadesIntegrantes = document.querySelector('#botonCalculoEdadesIntegrantes');
 let arrayEdadesIntegrantesTotales;
+const $botonEliminarIntegrantes = document.querySelector('#botonEliminarIntegrantes');
 
 function crearCasillerosEdades(cantidadDeIntegrantesFamiliares) {
     const $cantidadIntegrantesTotales = Number(document.querySelector('#cantidadIntegrantesFamiliares').value);
@@ -16,6 +17,7 @@ function crearCasillerosEdades(cantidadDeIntegrantesFamiliares) {
 
     for (let i = 0 ; i < $cantidadIntegrantesTotales ; i++) {
         const $nuevoElementoDiv = document.createElement('div');
+        $nuevoElementoDiv.id = 'casillerosIntegrantes';
         $formularioEdadesIntegrantesFamiliares.appendChild($nuevoElementoDiv);
         
         const $labelIntegrante = document.createElement('label');
@@ -30,7 +32,7 @@ function crearCasillerosEdades(cantidadDeIntegrantesFamiliares) {
         $nuevoElementoDiv.appendChild($casillaEdad);
 
         const $botonCalculoEdades = document.createElement('button');
-        $botonCalculoEdades.id = 'botonCalcularEdades'
+        $botonCalculoEdades.id = 'botonCalcularEdades';
     }
 }
 
@@ -68,6 +70,12 @@ function calcularPromedioEdades(edadesIntegrantes) {
     return $promedioEdadIntegrantes.value = `El promedio de la edad de los integrantes es ${promedioTotalEdades}`; 
 }
 
+function eliminarCasillerosIntegrantes(casilleros) {
+    const $casillerosIntegrantes = document.querySelector('#casillerosIntegrantes');
+        return $casillerosIntegrantes.remove();
+
+}
+
 $botonCalculoIntegrantesFamiliares.onclick = function (){ 
      return crearCasillerosEdades();
 }
@@ -79,4 +87,6 @@ $botonCalculoEdadesIntegrantes.onclick = function () {
     calcularPromedioEdades();
 }
 
-
+$botonEliminarIntegrantes.onclick = function () {
+    return eliminarCasillerosIntegrantes();
+}
