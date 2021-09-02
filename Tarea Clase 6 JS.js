@@ -8,8 +8,8 @@ Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuev
 
 const $botonCalculoIntegrantesFamiliares = document.querySelector('#botonCalculoIntegrantes');
 const $botonCalculoEdadesIntegrantes = document.querySelector('#botonCalculoEdadesIntegrantes');
-let arrayEdadesIntegrantesTotales;
 const $botonEliminarIntegrantes = document.querySelector('#botonEliminarIntegrantes');
+let arrayEdadesIntegrantesTotales;
 
 function crearCasillerosEdades(cantidadDeIntegrantesFamiliares) {
     const $cantidadIntegrantesTotales = Number(document.querySelector('#cantidadIntegrantesFamiliares').value);
@@ -71,10 +71,12 @@ function calcularPromedioEdades(edadesIntegrantes) {
 }
 
 function eliminarCasillerosIntegrantes(casilleros) {
-    const $casillerosIntegrantes = document.querySelector('#casillerosIntegrantes');
-        return $casillerosIntegrantes.remove();
-
+    const $casillerosIntegrantes = document.querySelectorAll('#casillerosIntegrantes');
+    for (let j = 0; j < $casillerosIntegrantes.length ; j++) {
+        $casillerosIntegrantes[j].remove();
+    }
 }
+
 
 $botonCalculoIntegrantesFamiliares.onclick = function (){ 
      return crearCasillerosEdades();
@@ -90,3 +92,4 @@ $botonCalculoEdadesIntegrantes.onclick = function () {
 $botonEliminarIntegrantes.onclick = function () {
     return eliminarCasillerosIntegrantes();
 }
+
